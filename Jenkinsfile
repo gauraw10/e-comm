@@ -8,7 +8,7 @@ node(){
 	stage("Sonar Scan"){
       def sonar = tool name: 'SonarQube', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
       sonar = "${sonar}/bin/sonar-scanner"
-	  sh "${sonar} -Dsonar.projectKey=ecomm.sandbox.demo -Dsonar.projectName=ECOMM-SANDBOX-DEMO -Dsonar.projectVersion=1.0 -Dsonar.sources=. -Dsonar.java.binaries=. -Dsonar.login=530811fc4f2aee680b6a85b1b00f646177cf8222 -Dsonar.host.url=localhost...."
+	  sh "${sonar} -Dsonar.projectKey=ecomm.sandbox.demo -Dsonar.projectName=ECOMM-SANDBOX-DEMO -Dsonar.projectVersion=1.0 -Dsonar.sources=. -Dsonar.java.binaries=. -Dsonar.login= -Dsonar.host.url=localhost...."
 	}
 	/*stage("Build Docker Image"){
         def dockercmd = tool name: 'docker_test', type: 'org.jenkinsci.plugins.docker.commons.tools.DockerTool'
